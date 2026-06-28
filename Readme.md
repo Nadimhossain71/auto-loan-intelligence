@@ -1,5 +1,8 @@
 You can use the following `README.md` as a professional GitHub/Kaggle-style project document.
 
+<img width="1024" height="572" alt="AUTO lOAN MASTER" src="https://github.com/user-attachments/assets/3af0a5d2-2a6d-432c-9286-fd34ded4cc7d" />
+
+
 # Multi-Agent AI Loan Processing System
 
 ## Overview
@@ -499,31 +502,28 @@ The Multi-Agent AI Loan Processing System demonstrates how Agentic AI can modern
 
 
 ```mermaid
-flowchart TD
+graph TD;
+A[Loan Application Submission];
 
-flowchart TD
+A --> B[Document Processing Agent];
+B --> C[Validation Agent];
 
-A[Loan Application Submission]
+C --> D[Credit Risk Processing Agent];
+C --> E[Income Analysis Agent];
+C --> F[Employment Risk Agent];
 
-A --> B[Document Processing Agent]
-B --> C[Validation Agent]
+D --> G[Credit Assessment Skill];
 
-C --> D[Credit Risk Processing Agent]
-C --> E[Income Analysis Agent]
-C --> F[Employment Risk Agent]
+G --> H[Loan Processing Orchestrator];
+E --> H;
+F --> H;
 
-D --> G[Credit Assessment Skill]
+H --> I[Final Decision Engine];
 
-G --> H[Loan Processing Orchestrator]
-E --> H
-F --> H
+I --> J[Approved];
+I --> K[Rejected];
+I --> L[Manual Review];
 
-H --> I[Final Decision Engine]
-
-I --> J[Approved]
-I --> K[Rejected]
-I --> L[Manual Review]
-
-H --> M[Audit Logs]
-H --> N[Agent Memory]
-H --> O[Retry & Circuit Breakers]
+H --> M[Audit Logs];
+H --> N[Agent Memory];
+H --> O[Retry & Circuit Breakers];
